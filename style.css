@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+
+.an{
+    align-items: end;
+    justify-content: end;
+}
+
+#mae{
+    font-family: "Satisfy";
+    font-size: 50px;
+    
+    
+
+}
+#resto{
+    font-family: "Lato";
+    font-size: 40px;
+    
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.heart{
+    position: relative;
+    display: block;
+    height: 100px;
+    width: 100px;
+    background: red;
+    border-radius:0 0 010px;
+    transform: rotate(-45deg);
+    animation: pulse 1s infinite;
+    align-items: center;
+}
+
+.heart::before,
+.heart::after {
+    position: absolute;
+    content:"";
+    width: 100px;
+    height: 100px;
+    background: red;
+    border-radius: 50%;
+}
+
+.heart::before {
+    top: -50px;
+    left:0;
+
+}
+.heart::after {
+    top:0;
+    right: -50px;
+}
+@keyframes pulse{
+    0%,20%{
+        transform: rotate(-45deg)
+        scale(1);
+        
+
+    }
+    30%{
+        transform:rotate(-45deg)
+        scale(1.2);
+        
+    }
+    50%{
+        transform:rotate(-45deg)
+        scale(1);
+
+    }
+
+    60%{
+        transform:rotate(-45deg)
+        scale(1.1);
+    }
+    70%,100%{
+        transform:rotate(-45deg)
+        scale(1.1);
+
+    }
+}
